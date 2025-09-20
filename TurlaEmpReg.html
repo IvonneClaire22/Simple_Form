@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Fixed typo -->
+    <title>Employee Registration Form</title>
+    <link rel="icon" href="empp.jpg" type="image/png">
+    </head>
+        <html>
+            <style>
+                body {
+                background-image: url("webg.png");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                font-family: sans-serif;
+                }
+
+
+                form {
+                max-width: 50%;
+                margin: 0 auto;
+                font-family: sans-serif;
+                background-color: #fff;
+                padding: 20px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: 2px #537ffe;
+                
+                }
+
+                .h2 {
+                text-align: center;
+                color: #fff;
+                padding-bottom: 30px;
+                padding-top: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border: 2px solid #fff;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                width: 50%;
+                height: 20px;
+                margin: 0 auto;
+                /*margin-left: 25%;
+                margin-right: 25%;*/
+                background-color: #537ffe;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                }
+
+                fieldset {
+                    border-color:#537ffe;
+                    background-color: #fff;
+                    
+
+                }
+
+                input[type=text]{
+                    border-radius: 3px;
+                    border: 1px solid gray;
+                    height: 30px;
+                   
+                    
+                }
+
+                input[type=email]{
+                    border-radius: 3px;
+                    border: 1px solid gray;
+                    height: 30px;
+                }
+            
+                input[type=tel]{
+                    border-radius: 3px;
+                    border: 1px solid gray;
+                    height: 30px;
+                }
+
+                input[type=date]{
+                    border-radius: 3px;
+                    height: 30px;
+                    width: 311px;
+                    text-transform:uppercase;
+                    color: gray;
+                    border: 1px solid gray;
+                }
+                input[type=submit]{
+                  background-color: #537ffe;
+                  border: none;
+                  border-radius: 20px;
+                  text-decoration: none;
+                  color: white;
+                  cursor: pointer;
+                  height: 50px;
+                  width: 200px;
+                  font: bold 20px sans-serif;
+                  text-transform: uppercase;
+                  margin-top: 20px;
+                }
+
+                label{
+                  font-size: 12px;
+                }
+                .column {
+                  float: left;
+                  width: 50%;
+                }
+
+                .row:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+
+                .upload-area {
+                  background-color: #f2f2f2;
+                  border: 2px dashed #ddd;
+                  border-radius: 3px;
+                  padding: 50px;
+                  text-align: center;
+                }
+
+                .file-upload {
+                  position: relative;
+                  overflow: hidden;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+
+                .file-upload input[type=file] {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  opacity: 0;
+                  cursor: pointer;
+                }
+
+                .file-upload-btn {
+                  background-color: #537ffe;
+                  color: #fff;
+                  font-size: 14px;
+                  text-transform: uppercase;
+                  border-radius: 5px;
+                  padding: 8px 16px;
+                  cursor: pointer;
+                  display: display;
+                }
+
+                .file-upload-btn i {
+                  margin-right: 5px;
+                  
+                }
+
+                .file-upload-btn:hover {
+                  background-color: #0d8aed;
+                }
+                .drag-text {
+                  margin-top: 10px;
+                  font-size: 14px;
+                  color: #777;
+                  text-align: center;
+                  cursor: pointer;
+                }
+
+                .drag-text p {
+                  margin: 0;
+                }
+
+                .drag-text.active {
+                  color: #2196f3;
+                }
+
+                textarea{
+                border: 1px solid gray;
+                border-radius: 3px;
+                height: 300px;
+                width:100%;
+                font-family: sans-serif;
+
+                }
+                radio{
+                  color: #777;
+                  border-radius: 3px;
+                }
+               
+
+            </style>
+            <body>
+              <div class="h2">
+              <h2>EMPLOYEE REGISTRATION FORM</h2>
+              </div>
+            <form action="thankyou.html" method="post">
+                <fieldset>
+                    <div class="row">
+                        <div class="column">
+                <p><b>Full Name</b></p>   
+                <input type="text" id="firstname" name="firstname" size="18" max="50"  required>&nbsp;<input type="text" id="lastname" name="lastname" size="18" max="50" required>
+                
+                <br>
+                <label for="firstname">First Name</label>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                <label for="lastname">Last Name</label>
+                
+
+                <p><b>Email</b></p>
+                <input type="email" name="Email" value="" size="42" maxlength="40" required/>
+                <label for="Email">example@example.com</label>
+            </div>
+            <div class="column">
+                <p><b>Date of Birth</b></p>   
+                <input type="date" id="dateofbirth" name="dateofbirth" size="42" maxlength="50"required><br>
+                <label for="dateofbirth">Date</label>
+
+                <p><b>Phone Number</b></p>
+                <input type="tel" id="phonenumber" name="Phone " size="42"/><br>
+                <label for="Phone">Please enter a valid phone number</label>
+           </div>
+        </div>
+        <p><b>Address</b></p>
+        <input type="text" name="streetadd1" size="92" maxlength="60"  required>
+        <label for="streetadd1">Street Address</label>
+        <input type="text" name="streetadd2" size="92" maxlength="60"  required>
+        <label for="streetadd2">Street Address Line 2</label><br>
+        <div class="row">
+            <div class="column">
+                 <input type="text" name="city" size="42" max="50"  required><br>
+                <label for="city">City</label>
+            </div>
+            <div class="column">
+                <input type="text" name="stateprov" size="42" max="50" required><br>
+                <label for="stateprov">State/Province</label>
+            </div>
+        </div>
+        <p><b>Applying Position</b></p>
+        <input type="text" name="Applyingpos" size="92" maxlength="60"  required>
+        <p><b>Type Of Work</b></p>
+        <div class="row">
+            <div class="column">
+        <input type="radio" name="Typeofwork" id="permanent" value="Permanent"/>Permanent<br>
+        <input type="radio" name="Typeofwork" id="both" value="Both"/>Both<br>
+        <input type="radio" name="Typeofwork" id="other" value="Other"/>Other<br>
+            </div>
+            <div class="column">
+                <input type="radio" name="Typeofwork" id="temporay" value="Temporary"/>Temporary<br>  
+            </div>
+        </div>
+        <p>Please Upload Resume</p>
+        <div class="upload-area">
+            <div class="file-upload">
+              <input type="file" id="file-input">
+              <div class="file-upload-btn">
+                <i class="fas fa-cloud-upload-alt"></i> Upload Files
+              </div>
+            </div>
+        <div class="drag-text">
+            <label for="file-input">Drag and drop files here</label>
+            </div>
+          </div>
+          <p>Cover Letter or Additional Information</p>
+          <textarea id="freeform" name="freeform" rows="4" cols="50" value=""></textarea>
+          <p><b>Veteran Status</b> (Please select the option that describes your status the best)</p>
+          <div class="row">
+            <div class="column">
+                <input type="radio" name="vetstat" id="veteran" value=""/>I am veteran<br>
+                <input type="radio" name="vetstat" id="sveteran" value=""/>I am a recently separated veteran<br>
+                <input type="radio" name="vetstat" id="nveteran" value=""/>I am not veteran<br>
+            </div>
+            <div class="column">
+                <input type="radio" name="vetstat" id="sdveteran" value=""/>I am a special disabled veteran<br>
+                <input type="radio" name="vetstat" id="pveteran" value=""/>I am an other protected veteran<br>
+                <input type="radio" name="vetstat" id="nsveteran" value=""/>Prefer Not The Answer<br>
+            </div>
+          </div>
+          <p><b>Gender</b></p>
+          <div class="row">
+            <div class="column">
+                <input type="radio" name="gender" id="female" value=""/>Female<br>
+                <input type="radio" name="gender" id="trans" value=""/>Transgender Female<br>
+                <input type="radio" name="gender" id="prefern" value=""/>Prefer Not The Answer<br>
+                <input type="radio" name="gender" id="notl" value=""/>Not Listed<br>
+            </div>
+            <div class="column">
+                <input type="radio" name="gender" id="male" value=""/>Male<br>
+                <input type="radio" name="gender" id="transm" value=""/>Transgender Male<br>
+            </div>
+          </div>
+          <p><b>Disabilities</b></p>
+          <input type="radio" name="disabilities" id="1" value=""/>I have disability<br>
+          <input type="radio" name="disabilities" id="2" value=""/>I have two or more impairments and/or disabling medical conditions<br>
+          <input type="radio" name="disabilities" id="3" value=""/>I have a Specific Learning Difficulty (e.g. Dyslexia/Dyspraxia/AD(H)D)<br>
+          <input type="radio" name="disabilities" id="4" value=""/>I have a social/communication impairment such as Asperger's syndrome/other autistic spectrum<br>
+          <input type="radio" name="disabilities" id="5" value=""/>I have a long standing illness or health condition such as cancer, HIV, diabetes, chronic heart disease, or epilepsy<br>
+          <input type="radio" name="disabilities" id="6" value=""/>I have a physical -impairment or mobility issues (e.g. difficulty using arms/using a wheelchair or cruthches)<br>
+          <input type="radio" name="disabilities" id="7" value=""/>I am deaf or have a serious hearing impairment<br>
+          <input type="radio" name="disabilities" id="8" value=""/>I am blind or have a serious visual impairment uncorrected by glasses<br>
+          <input type="radio" name="disabilities" id="9" value=""/>Prefer not to answer<br>
+          <input type="radio" name="disabilities" id="10" value=""/>I have a disability, impairment or medical condition not listed here<br>
+          <p><b>Race</b></p>
+          <div class="row">
+            <div class="column">
+              <input type="radio" name="race" id="AN" value=""/>American Native or Alaska Native<br>
+              <input type="radio" name="race" id="b" value=""/>Black or African American<br>
+              <input type="radio" name="race" id="w" value=""/>White<br>
+              <input type="radio" name="race" id="ds" value=""/>Decline to specify<br>
+              <input type="radio" name="race" id="o" value=""/>Other<br>
+            </div>
+            <div class="column">
+              <input type="radio" name="race" id="a" value=""/>Asian<br>
+              <input type="radio" name="race" id="h" value=""/>Native Hawaiian or Other Pacific Islander<br>
+              <input type="radio" name="race" id="tm" value=""/>Two or more races<br>
+            </div>
+          </div>
+          <p>Additional Notes</p>
+          <textarea id="form" name="form" rows="4" cols="50" value="">Type here...</textarea>
+            </fieldset>
+                <input type="submit" name="submit" Value="Submit"/>
+            </form>
+          </body>
+        </html>
